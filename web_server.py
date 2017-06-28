@@ -1,7 +1,7 @@
 #! /usr/bin/python3
 # this python code use decode function, which must be used in python3.x
 from bottle import get, post, run, request, template, route, static_file
-from config import IP_ADDRESS, end, control
+from config import IP_ADDRESS, PORT, end, control
 
 
 @route('/static/css/<filename>')
@@ -35,6 +35,6 @@ def cmd():
 
 
 try:
-    run(host=IP_ADDRESS, port=80)
+    run(host=IP_ADDRESS, port=PORT)
 finally:
     end()
